@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+a:hover {
+    text-decoration: none;
+}
+
+app-login {
+    width: 100%;
+}
+
+.navbar-wrapper {
+    padding: 8px 2.4em;
+}
+
+.fixed-top-jumb {
+    margin-top: 40px;
+}

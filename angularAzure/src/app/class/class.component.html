@@ -1,0 +1,31 @@
+<p-tabView>
+  <p-tabPanel header="Question Papers" leftIcon="pi pi-calendar">
+    <span *ngIf="data && data.questions">
+      <div *ngFor="let item of data.questions; let i =index">
+        {{i+1}} ) {{item.question}}
+      </div>
+    </span>
+  </p-tabPanel>
+  <p-tabPanel header="Documents" leftIcon="pi pi-inbox">
+    <span *ngIf="data && data.documnets">
+      <div *ngFor="let item of data.documnets; let i =index">
+        <a href="../../assets/images/1.png" download>{{i+1}} ) {{item.name}} </a>
+      </div>
+    </span>
+  </p-tabPanel>
+  <p-tabPanel header="Vidoes" leftIcon="pi pi-user" rightIcon="pi pi-star">
+    <div class="ui-g" *ngIf="data && data.videos">
+      <div class="ui-g-12 ui-md-6 ui-lg-4" *ngFor="let item of data.videos; let i =index">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/_thke1fERps" frameborder="0"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Images" leftIcon="pi pi-user" rightIcon="pi pi-star">
+    <div class="ui-g" *ngIf="data && data.images">
+      <div class="ui-g-12 ui-md-6 ui-lg-4" *ngFor="let item of data.images; let i =index">
+        <img src="https://www.primefaces.org/primeng/assets/showcase/images/layouts/verona-ng.jpg" width="100%">
+      </div>
+    </div>
+  </p-tabPanel>
+</p-tabView>
